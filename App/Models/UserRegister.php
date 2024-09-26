@@ -63,6 +63,11 @@ class UserRegister extends Model{
         if($_FILES['profilePic']['size'] > $this->maxImageSize) {
             $this->errors['profilePic'] = 'The profile picture is too big. (Max size: 2MB)';
         }
+
+        $allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        if (!in_array($_FILES['profilePic']['type'], $allowedImageTypes)) {
+            $this->errors['profilePic'] = "Invalid file type. Only image files are allowed.";
+        }
     }
 
     public static function isEmailExists($email){
