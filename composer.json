@@ -1,0 +1,18 @@
+{
+    "name": "gray/test",
+    "description": "technical exam PHP",
+    "autoload": {
+        "psr-4": {
+            "Gray\\Test\\": "App\\"
+        }
+    },
+    "authors": [
+        {
+            "name": "EchoSNS",
+            "email": "yvansinues09@yahoo.com"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    }
+}
